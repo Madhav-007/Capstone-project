@@ -1,48 +1,45 @@
-/* Body */
+
 body {
   margin: 0;
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
-  background-color: #f8f8f8;
+  background-color: #111111;
+  color: #f5f5f5;
 }
 
-/* Navbar */
+/* ---------- Navbar ---------- */
 .navbar {
-  background-color: #ffffff; 
-  box-shadow: 0 2px 10px #d9d9d9; 
+  background-color: #1a1a1a; 
+  box-shadow: 0 2px 10px #000000;
   padding: 18px 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* Logo */
 .logo {
   font-size: 26px;
   font-weight: 700;
-  color: #1a1a1a;
-  letter-spacing: 1px;
+  color: #f5f5f5;
   text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  gap: 8px;
   cursor: pointer;
+  letter-spacing: 1px;
 }
 
 .logo:hover {
   color: #c9a227; 
 }
 
-/* Navigation Links */
+/* Nav Links */
 nav a {
   text-decoration: none;
-  color: #333333;
+  color: #e0e0e0;
   margin: 0 18px;
   font-weight: 600;
   font-size: 16px;
   position: relative;
+  transition: color 0.3s ease;
 }
 
-/* Hover underline */
 nav a::after {
   content: "";
   position: absolute;
@@ -50,7 +47,8 @@ nav a::after {
   left: 0;
   width: 0%;
   height: 2px;
-  background-color: #c9a227; 
+  background-color: #c9a227;
+  transition: width 0.3s ease;
 }
 
 nav a:hover::after {
@@ -61,7 +59,7 @@ nav a:hover {
   color: #c9a227;
 }
 
-/* Hero Section */
+/* ---------- Hero Section ---------- */
 .hero {
   position: relative;
   background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c');
@@ -81,67 +79,145 @@ nav a:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #00000080; 
+  background-color: #000000b3; 
 }
 
 .hero-content {
   position: relative;
   z-index: 1;
-  max-width: 700px;
-  padding: 20px;
+  max-width: 750px;
 }
 
 .hero h2 {
-  font-size: 48px;
+  font-size: 46px;
   font-weight: 700;
-  letter-spacing: 1px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .hero p {
   font-size: 18px;
-  line-height: 1.6;
-  color: #f0f0f0;
-  margin-bottom: 30px;
+  color: #f5f5f5;
+  margin-bottom: 25px;
 }
 
-.button {
-  background-color: #ffffff;
-  color: #000000;
-  padding: 12px 25px;
-  text-decoration: none;
+/* Search Bar */
+.search-form {
+  display: inline-flex;
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.search-form input,
+.search-form select {
+  padding: 10px;
+  border: 1px solid #444444;
+  margin: 0 5px;
+  border-radius: 4px;
+  background-color: #1a1a1a;
+  color: #f5f5f5;
+}
+
+.search-form button {
+  background-color: #c9a227;
+  border: none;
+  color: #1a1a1a;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
   font-weight: bold;
-  border-radius: 5px;
 }
 
-.button:hover {
-  background-color: #000000;
+.search-form button:hover {
+  background-color: #e0b93d;
+}
+
+/* ---------- Top Locations ---------- */
+.locations {
+  background-color: #121212;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.locations h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
   color: #ffffff;
 }
 
-/* Properties Section */
+.location-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.loc-card {
+  background-color: #1c1c1c;
+  border: 1px solid #2e2e2e;
+  padding: 20px;
+  border-radius: 8px;
+  width: 220px;
+  box-shadow: 0 3px 8px #000000;
+}
+
+.loc-card h3 {
+  color: #c9a227;
+}
+
+.why-us {
+  background-color: #181818;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.why-us h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+.why-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.why-box {
+  background-color: #1f1f1f;
+  border: 1px solid #333333;
+  padding: 20px;
+  border-radius: 8px;
+  width: 260px;
+  box-shadow: 0 2px 6px #000000;
+}
+
+.why-box h3 {
+  color: #c9a227;
+}
+
+/* ---------- Properties Section ---------- */
 .properties {
   text-align: center;
   padding: 60px 20px;
-  background-color: #ffffff;
+  background-color: #111111;
 }
 
 .properties h2 {
-  margin-bottom: 30px;
+  color: #ffffff;
   font-size: 28px;
-  color: #333333;
+  margin-bottom: 30px;
 }
 
 .property {
   display: inline-block;
   width: 300px;
   margin: 15px;
-  background-color: #fafafa;
-  border: 1px solid #dddddd;
+  background-color: #1a1a1a;
+  border: 1px solid #2a2a2a;
   border-radius: 8px;
   text-align: left;
   overflow: hidden;
-  box-shadow: 0 3px 8px #cccccc;
+  box-shadow: 0 3px 8px #000000;
 }
 
 .property img {
@@ -152,24 +228,49 @@ nav a:hover {
 
 .property h3 {
   margin: 10px;
-  color: #222222;
+  color: #c9a227;
 }
 
 .property p {
   margin: 10px;
-  color: #555555;
+  color: #d9d9d9;
 }
 
 .price {
   font-weight: bold;
-  color: #008000;
+  color: #4caf50;
 }
 
-/* Footer */
+/* ---------- App Download Section ---------- */
+.app-banner {
+  background-color: #1a1a1a;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.app-banner h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.app-banner p {
+  color: #cccccc;
+  margin-bottom: 20px;
+}
+
+.app-buttons img {
+  width: 160px;
+  margin: 10px;
+  filter: brightness(0.9);
+}
+
+/* ---------- Footer ---------- */
 footer {
   background-color: #000000;
-  color: #ffffff;
+  color: #f5f5f5;
   text-align: center;
   padding: 15px 0;
   margin-top: 40px;
+  letter-spacing: 0.5px;
 }
